@@ -1,0 +1,51 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username" : "jin",
+    "password" : "123456789"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username" : "ducdatchelsea",
+    "password" : "123456"
+}
+
+### 
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGY0MmNlOGY1MWI4ZDAyMmM3ZTE0NDEiLCJpYXQiOjE2MjY3MDk1MDB9.6wIb7-ETGhy5AFxu11sc_nsetxHyK4SO2HInxdhuRaw
+
+
+{
+    "title": "my three post",
+    "description": "redux",
+    "url" : "shopee.com",
+    "status": "LEARNING"
+}
+###
+
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGY0MmNlOGY1MWI4ZDAyMmM3ZTE0NDEiLCJpYXQiOjE2MjY3MTEzNzJ9.N7Up9UylYKR46KHpx1FCcdsk4uP5d9TmFNfdzeQ82Zs
+###
+
+PUT http://localhost:5000/api/posts/60f5a7b4cd7ba11bf41928e1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGY0MmNlOGY1MWI4ZDAyMmM3ZTE0NDEiLCJpYXQiOjE2MjY3MTEzNzJ9.N7Up9UylYKR46KHpx1FCcdsk4uP5d9TmFNfdzeQ82Zs
+
+{
+    "title": "Learning react",
+    "description": "abc->xyz",
+    "url" : "facebook.com",
+    "status": "LEARNED"
+}
+###
+
+DELETE http://localhost:5000/api/posts/60f5a7b4cd7ba11bf41928e1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGY0MmNlOGY1MWI4ZDAyMmM3ZTE0NDEiLCJpYXQiOjE2MjY3MTEzNzJ9.N7Up9UylYKR46KHpx1FCcdsk4uP5d9TmFNfdzeQ82Zs
